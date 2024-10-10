@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Kahfi MS</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    
 </head>
 
 <body>
@@ -23,27 +25,27 @@
             </article>
 
             <!-- inputan suhu -->
-            <form action="">
+            <form onsubmit="validateform(event)">
                 <div>
-                    <label for="input-suhu">Celcius</label>
+                    <label id="input-label" for="input-suhu">Celcius (&deg;C)</label>
                 </div>
                 
-                <textarea name="" id="input-suhu"></textarea>
+                <input type="number" id="input-suhu" required>
 
-                <div>
-                    <button class=" form-btn form-btn-submit">Konversi</button>
-                    <button class="form-btn form-btn-reset">Reset</button>
-                    <button class=" form-btn form-btn-reverse">Reverse</button>
+                <div class="btn-container">
+                    <button type="submit" class=" form-btn form-btn-submit">Konversi</button>
+                    <button type="button" class=" form-btn form-btn-reverse" onclick="reverse()">Reverse</button>
                 </div>
             </form>
+            <button type="button" class="form-btn form-btn-reset" onclick="reset()">Reset</button>
 
             <!-- hasil inputan -->
             <div>
                 <div>
-                    <label for="hasil-suhu">Fahrenheit (&deg;F)</label>
+                    <label id="output-label" for="hasil-suhu">Fahrenheit (&deg;F)</label>
                 </div>
                 <div>
-                    <textarea name="" id=""></textarea>
+                    <textarea id="hasil-suhu" readonly></textarea>
                 </div>
 
 
@@ -56,7 +58,7 @@
                 </div>
 
                 <div>
-                    <textarea name="" id="how-to-suhu"></textarea>
+                    <textarea id="how-to-suhu" readonly></textarea>
                 </div>
                 
             </div>
@@ -67,7 +69,7 @@
         <!-- info content -->
         <section>
             <header>
-                <h2>Cara Konversi Celsius ke Fahrenheit</h2>
+                <h2>Cara Konversi Celcius ke Fahrenheit</h2>
             </header>
             <hr>
             <article>
@@ -90,6 +92,8 @@
     <footer>
         <p>Made by @muhkahfims</p>
     </footer>
+
+    <script src="JS\script.js"></script>
 </body>
 
 </html>
